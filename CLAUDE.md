@@ -91,6 +91,7 @@ Project skills live in `.claude/skills/`. Use them — they encode the checklist
 | `ai-coaching-prompts` | Changing what FocusBuddy says, LLM provider, TTS voice |
 | `hackathon-demo` | Pre-flight checklist and the 3-minute live demo |
 | `odoo-sync` | (Planned) pushing focus sessions to Odoo Timesheets via MCP |
+| `github-push` | Committing and pushing to GitHub — runs `precheck.py` (repo root, secrets, Wi-Fi passwords, forbidden/large files) first |
 
 ## Conventions
 

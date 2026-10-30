@@ -84,7 +84,7 @@ Parts list, wiring, flashing, calibration and phone setup: **[focusbuddy/SETUP.m
 ├── .claude/
 │   ├── settings.json             ← permissions (deny/ask/allow) + hook wiring
 │   ├── hooks/guardrails.py       ← blocks secrets & destructive commands before they run
-│   └── skills/                   ← 8 project skills (firmware, phone deploy, testing, calibration, …)
+│   └── skills/                   ← 9 project skills (firmware, phone deploy, testing, calibration, GitHub push, …)
 ├── docs/
 │   ├── PRD.md                    ← product requirements
 │   ├── ARCHITECTURE.md           ← components, sequences, state machines, data model
@@ -116,7 +116,7 @@ Every item is mapped to code, along with the known gaps: **[docs/GUARDRAILS.md](
 | Asset | Purpose |
 |---|---|
 | [`CLAUDE.md`](CLAUDE.md) | Project brief, commands, hard rules with enforcement mechanism, definition of done |
-| [`.claude/skills/`](.claude/skills/) | `esp32-firmware`, `phone-server-deploy`, `simulate-and-test`, `sensor-calibration`, `telemetry-contract`, `ai-coaching-prompts`, `hackathon-demo`, `odoo-sync` |
+| [`.claude/skills/`](.claude/skills/) | `esp32-firmware`, `phone-server-deploy`, `simulate-and-test`, `sensor-calibration`, `telemetry-contract`, `ai-coaching-prompts`, `hackathon-demo`, `odoo-sync`, `github-push` (with a tested pre-push secret scanner) |
 | [`.claude/hooks/guardrails.py`](.claude/hooks/guardrails.py) | PreToolUse hook: blocks API keys/private keys in files, `.env` writes, secret echo, `rm -rf`, force push, hard reset, `sudo`, `curl \| sh`, flash erase, history deletion |
 | [`.claude/settings.json`](.claude/settings.json) | Deny secret reads and destructive commands; ask before flashing, installing, committing, pushing, or editing `.mcp.json` |
 | [`.mcp.json`](.mcp.json) | Odoo MCP server reference config with env-var placeholders (roadmap) |

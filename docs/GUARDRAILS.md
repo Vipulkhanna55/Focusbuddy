@@ -117,6 +117,7 @@ FocusBuddy is built with AI coding agents. These guardrails stop an agent from l
 | Pre-execution hook | [`.claude/hooks/guardrails.py`](../.claude/hooks/guardrails.py) | Runs before every `Bash`, `Write`, `Edit`, `MultiEdit`; exit code 2 blocks the action with an explanation |
 | Permissions | [`.claude/settings.json`](../.claude/settings.json) | `deny` (secret files, `rm -rf`, `sudo`, force push, hard reset), `ask` (flash, install, commit, push, adb, edit `.mcp.json`), `allow` (compile, py_compile, simulator) |
 | Skills (checklists) | [`.claude/skills/`](../.claude/skills/) | Task-specific procedures with built-in guardrails, e.g. the `telemetry-contract` sync checklist |
+| Pre-push gate | [`.claude/skills/github-push/precheck.py`](../.claude/skills/github-push/precheck.py) | Before any push: repo root must be the project (not a parent like `$HOME`), no `.env`/DB/key files, no API keys in files **or unpushed commits**, no real Wi-Fi passwords in firmware, no files over GitHub limits. Shares secret patterns with the hook |
 
 ### 7.2 What the hook blocks
 
