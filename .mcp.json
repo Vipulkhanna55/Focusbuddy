@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "odoo": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": ["mcp-server-odoo"],
+      "env": {
+        "ODOO_URL": "${ODOO_URL:-https://your-company.odoo.com}",
+        "ODOO_DB": "${ODOO_DB:-your-database}",
+        "ODOO_API_KEY": "${ODOO_API_KEY:-set-ODOO_API_KEY-in-your-shell}"
+      }
+    }
+  }
+}

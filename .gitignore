@@ -1,0 +1,23 @@
+# Secrets — keys live in the user's shell / Termux ~/.bashrc, never in git
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Runtime data created by the phone server (personal history + generated audio)
+focusbuddy.db
+focusbuddy.db-journal
+tts_cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Claude Code personal overrides
+.claude/settings.local.json
+
+# Editors / OS
+.vscode/
+.DS_Store
